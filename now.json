@@ -8,9 +8,6 @@
             "use": "@now/static-build"
         }
     ],
-    "regions": [
-        "bru"
-    ],
     "routes": [
         {
             "src": "^/static/(.*)",
