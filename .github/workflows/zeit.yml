@@ -12,19 +12,19 @@ jobs:
         with:
           args: "branch master"
 
-  publish:
-    name: Publish to prod
-    runs-on: ubuntu-latest
-    needs: [filteroutmaster]
-    steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v1
-      - name: Deploy on Zeit - Prod
-        uses: actions/zeit-now@master
-        env:
-          ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
-        with:
-          args: --prod
+  # publish:
+  #   name: Publish to prod
+  #   runs-on: ubuntu-latest
+  #   needs: [filteroutmaster]
+  #   steps:
+  #     - name: Checkout the repository
+  #       uses: actions/checkout@v1
+  #     - name: Deploy on Zeit - Prod
+  #       uses: actions/zeit-now@master
+  #       env:
+  #         ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
+  #       with:
+  #         args: --prod
 
   deploy:
     name: Deploy
